@@ -18,7 +18,23 @@
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
 
-    <!--支持使用 JDBC 访问数据库-->
+<!-- spring could -->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-config-server</artifactId>
+    </dependency>
+    <!-- sping cloud 注册服务 -->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-eureka</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+  <!--支持使用 JDBC 访问数据库-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-jdbc</artifactId>
@@ -67,5 +83,12 @@
   </dependencies>
   <build>
     <finalName>springboot_maven_demo</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+    <defaultGoal>compile</defaultGoal>
   </build>
 </project>
